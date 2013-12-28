@@ -15,23 +15,10 @@
 	</properties>
 
 	<scm>
-		<connection>scm:git:ssh://git@github.com/databox/custom-datasource-sdk.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com/databox/custom-datasource-sdk.git</developerConnection>
-		<url>https://github.com/databox/custom-datasource-sdk.git</url>
+		<connection>scm:git:ssh://git@github.com/umajeric/intercom-api-services.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/umajeric/intercom-api-services.git</developerConnection>
+		<url>https://github.com/umajeric/intercom-api-services.git</url>
 	</scm>
-
-	<distributionManagement>
-		<repository>
-			<id>databox-git-maven-releases</id>
-			<name>Databox Releases</name>
-			<url>git:releases://git@github.com:databox/maven-repo.git</url>
-		</repository>
-		<snapshotRepository>
-			<id>databox-git-maven-snapshots</id>
-			<name>Databox Snapshots</name>
-			<url>git:snapshots://git@github.com:databox/maven-repo.git</url>
-		</snapshotRepository>
-	</distributionManagement>
 
 	<repositories>
 		<repository>
@@ -84,12 +71,6 @@
 			<version>1.0.13</version>
 			<scope>test</scope>
 		</dependency>
-
-		<dependency>
-			<groupId>com.google.apis</groupId>
-			<artifactId>google-api-services-analytics</artifactId>
-			<version>v3-rev78-1.17.0-rc</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -104,23 +85,6 @@
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
-			<!-- <plugin> -->
-			<!-- <groupId>org.codehaus.mojo</groupId> -->
-			<!-- <artifactId>buildnumber-maven-plugin</artifactId> -->
-			<!-- <version>1.2</version> -->
-			<!-- <executions> -->
-			<!-- <execution> -->
-			<!-- <phase>validate</phase> -->
-			<!-- <goals> -->
-			<!-- <goal>create</goal> -->
-			<!-- </goals> -->
-			<!-- </execution> -->
-			<!-- </executions> -->
-			<!-- <configuration> -->
-			<!-- <doCheck>true</doCheck> -->
-			<!-- <doUpdate>true</doUpdate> -->
-			<!-- </configuration> -->
-			<!-- </plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>

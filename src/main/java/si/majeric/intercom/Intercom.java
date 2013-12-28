@@ -31,6 +31,11 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
+/**
+ * 
+ * @author Uros Majeric
+ *
+ */
 public class Intercom {
 	private static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 	private static final String POST_CONTENT_TYPE = "application/json";
@@ -117,8 +122,6 @@ public class Intercom {
 		if (method == null) {
 			method = "GET";
 		}
-		// String[] headers = { "Content-Type: application/json" };
-
 		HttpHost targetHost = new HttpHost(API_ENDPOINT.getHost(), API_ENDPOINT.getPort(), API_ENDPOINT.getScheme());
 
 		CloseableHttpClient httpclient = null;
@@ -163,37 +166,6 @@ public class Intercom {
 				e.printStackTrace();
 			}
 		}
-
-		// ch = curl_init(url);
-		//
-		// if (this.debug) {
-		// curl_setopt(ch, CURLOPT_VERBOSE, true);
-		// }
-		//
-		// if (method == "POST") {
-		// curl_setopt(ch, CURLOPT_POSTFIELDS, post_data);
-		// curl_setopt(ch, CURLOPT_POST, true);
-		// } else if (method == "PUT") {
-		// curl_setopt(ch, CURLOPT_CUSTOMREQUEST, "PUT");
-		// curl_setopt(ch, CURLOPT_POSTFIELDS, post_data);
-		// headers[] = "Content-Length: " . strlen(post_data);
-		// } else if (method != "GET") {
-		// curl_setopt(ch, CURLOPT_CUSTOMREQUEST, method);
-		// }
-		// curl_setopt(ch, CURLOPT_RETURNTRANSFER, true);
-		// curl_setopt(ch, CURLOPT_HTTPHEADER, headers);
-		// curl_setopt(ch, CURLOPT_CONNECTTIMEOUT, 5);
-		// curl_setopt(ch, CURLOPT_TIMEOUT, 600); // Intercom doesn"t support pagination, some calls are slow
-		// curl_setopt(ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-		// curl_setopt(ch, CURLOPT_USERPWD, this.appId . ":" . this.apiKey);
-		//
-		//
-		// // Set HTTP error, if any
-		// this.lastError = array(
-		// "code" => curl_errno(ch),
-		// "message" => curl_error(ch)
-		// );
-
 		return null;
 	}
 

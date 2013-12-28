@@ -10,6 +10,11 @@ import org.slf4j.LoggerFactory;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+/**
+ * 
+ * @author Uros Majeric
+ *
+ */
 public class IntercomTest extends TestCase {
 	private static final int PAGE_SIZE = 100;
 
