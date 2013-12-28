@@ -13,7 +13,7 @@ import com.google.gson.JsonObject;
 /**
  * 
  * @author Uros Majeric
- *
+ * 
  */
 public class IntercomTest extends TestCase {
 	private static final int PAGE_SIZE = 100;
@@ -23,14 +23,17 @@ public class IntercomTest extends TestCase {
 	private Intercom _intercom;
 
 	protected void setUp() throws Exception {
-		String appId = "{your-app-id}";
-		String apiKey = "{your-api-key}";
-		_intercom = new Intercom(appId, apiKey);
+		String appId = System.getProperty("intercom-app-id");
+		String apiKey = System.getProperty("intercom-api-key");
+		if (appId != null && !appId.isEmpty() && apiKey != null && !apiKey.isEmpty()) {
+			_intercom = new Intercom(appId, apiKey);
+		}
 	}
 
 	public void testGetAllUsers() {
 		if (_intercom == null) {
 			logger.warn("Intercom not initialized!");
+			return;
 		}
 		Integer page = 1;
 		do {
