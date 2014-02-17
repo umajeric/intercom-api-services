@@ -47,3 +47,5 @@ Intercom intercom = new Intercom("dummy-app-id", "dummy-api-key");
 intercom.createUser("userId001", "email@example.com", null, null, System.currentTimeMillis(), null, null, null, null);
 
 ```
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/umajeric/intercom-api-services/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
